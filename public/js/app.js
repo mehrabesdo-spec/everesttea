@@ -51,15 +51,16 @@ const ART = {
   </svg>`,
 };
 
+/* translucent glass tints per tea type */
 const TYPE_TINT = {
-  Black: "#e7d9c3",
-  Green: "#d8e4d3",
-  White: "#ecebe4",
-  Oolong: "#dde5d4",
-  Spiced: "#eddfc9",
-  Dark: "#ddd2c0",
-  Herbal: "#e9e0cf",
-  Flavored: "#dde3e6",
+  Black: "rgba(224, 123, 79, 0.16)",
+  Green: "rgba(111, 211, 189, 0.15)",
+  White: "rgba(237, 243, 249, 0.10)",
+  Oolong: "rgba(236, 194, 126, 0.15)",
+  Spiced: "rgba(224, 123, 79, 0.18)",
+  Dark: "rgba(148, 178, 214, 0.13)",
+  Herbal: "rgba(111, 211, 189, 0.13)",
+  Flavored: "rgba(94, 136, 205, 0.18)",
 };
 
 /* ---------- state ---------- */
@@ -72,11 +73,11 @@ const fmt = (n) => "৳" + n.toLocaleString("en-US");
 
 /* ---------- product cards ---------- */
 function cardHTML(t, i) {
-  const idx = String(i + 1).padStart(2, "0");
+  const idx = String((i || 0) + 1).padStart(2, "0");
   const hot = /Best Seller|Highest Peak|Award/.test(t.badge || "");
   return `
   <article class="product reveal">
-    <div class="product-visual" style="--tint:${TYPE_TINT[t.type] || "#e7d9c3"}">
+    <div class="product-visual" style="--tint:${TYPE_TINT[t.type] || "rgba(148,178,214,0.12)"}">
       <span class="index">${idx} / 15</span>
       <span class="product-badge ${hot ? "hot" : ""}">${t.badge}</span>
       ${ART[t.type] || ART.Black}
@@ -133,7 +134,7 @@ function applyShopFilters() {
   });
   grid.innerHTML = list.length
     ? list.map(cardHTML).join("")
-    : `<div class="empty-cart" style="grid-column:1/-1"><span class="big">Fog on the mountain</span>No tea matched that search.<br/><span style="font-family:var(--font-bn)">কোনো চা পাওয়া যায়নি।</span></div>`;
+    : `<div class="empty-cart" style="grid-column:1/-1"><span class="big">কুয়াশা নেমেছে</span>No tea matched that search.<br/><span style="font-family:var(--font-bn)">অন্য কোনো স্বাদ খুঁজে দেখুন।</span></div>`;
   const count = document.getElementById("resultCount");
   if (count) count.textContent = list.length + " of 15 blends";
   observeReveals();
@@ -148,7 +149,7 @@ function addToCart(id) {
   else cart.push({ id, qty: 1 });
   saveCart();
   syncCartUI();
-  showToast(t.bn + " — যোগ হয়েছে");
+  showToast(t.bn + " — কার্টে যোগ হয়েছে");
 }
 
 function setQty(id, d) {
@@ -187,7 +188,7 @@ function lineHTML(id, qty) {
   if (!t) return "";
   return `
   <div class="ci">
-    <div class="ci-art" style="--tint:${TYPE_TINT[t.type] || "#e7d9c3"}">${ART[t.type] || ART.Black}</div>
+    <div class="ci-art" style="--tint:${TYPE_TINT[t.type] || "rgba(148,178,214,0.12)"}">${ART[t.type] || ART.Black}</div>
     <div class="ci-info">
       <b>${t.name}</b>
       <small>${fmt(t.price)} /100g</small>
@@ -208,7 +209,7 @@ function renderDrawer() {
   const box = document.getElementById("drawerItems");
   if (!box) return;
   if (!cart.length) {
-    box.innerHTML = `<div class="empty-cart"><span class="big">The cart is light</span>Like mountain air.<br/><span style="font-family:var(--font-bn)">কার্ট এখনো খালি।</span></div>`;
+    box.innerHTML = `<div class="empty-cart"><span class="big">কার্ট হালকা</span>Like mountain air.<br/><span style="font-family:var(--font-bn)">এখনো কিছু বাছা হয়নি।</span></div>`;
   } else {
     box.innerHTML = cart.map((l) => lineHTML(l.id, l.qty)).join("");
   }
@@ -220,7 +221,7 @@ function renderCheckout() {
   const box = document.getElementById("coItems");
   if (!box) return;
   if (!cart.length) {
-    box.innerHTML = `<p style="color:var(--soft);font-size:.92rem;padding:10px 0">Your cart is empty — <a href="/shop.html" style="color:var(--clay)">browse the collection</a>.</p>`;
+    box.innerHTML = `<p style="color:var(--muted);font-size:.92rem;padding:10px 0">Your cart is empty — <a href="/shop.html" style="color:var(--clay-2)">browse the collection</a>.</p>`;
   } else {
     box.innerHTML = cart
       .map((l) => {
@@ -279,12 +280,13 @@ function showToast(msg) {
 /* ---------- checkout ---------- */
 async function submitOrder(e) {
   e.preventDefault();
-  if (!cart.length) return showToast("আগে চা নিন — cart is empty");
+  if (!cart.length) return showToast("কার্ট খালি — cart is empty");
   const f = e.target;
+  const fields = f.elements;
   const payload = {
-    name: f.name.value,
-    phone: f.phone.value,
-    address: f.address.value,
+    name: fields["name"].value,
+    phone: fields["phone"].value,
+    address: fields["address"].value,
     items: cart.map((l) => ({ id: l.id, qty: l.qty })),
   };
   const res = await fetch("/api/orders", {

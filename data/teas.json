@@ -2,7 +2,7 @@
   {
     "id": "darjeeling-first-flush",
     "name": "Darjeeling First Flush",
-    "bn": "দার্জিলিং ফার্স্ট ফ্লাশ",
+    "bn": "দার্জিলিং প্রথম ফ্লাশ",
     "type": "Black",
     "origin": "Darjeeling, India",
     "height": 6700,
@@ -10,7 +10,7 @@
     "oldPrice": 1150,
     "rating": 4.9,
     "badge": "Best Seller",
-    "notes": "Muscatel aroma · Spring-picked · Light body",
+    "notes": "Muscatel aroma, Spring-picked, Light body",
     "gradient": "linear-gradient(135deg,#204a3a,#6fb28a)"
   },
   {
@@ -23,7 +23,7 @@
     "price": 780,
     "rating": 4.8,
     "badge": "Strong",
-    "notes": "Malty & bold · Golden buds · Perfect with milk",
+    "notes": "Malty & bold, Golden buds, Perfect with milk",
     "gradient": "linear-gradient(135deg,#3a2415,#b07d3c)"
   },
   {
@@ -36,7 +36,7 @@
     "price": 890,
     "rating": 5.0,
     "badge": "Highest Peak",
-    "notes": "High-altitude · Fresh pine · Fruity finish",
+    "notes": "High-altitude, Fresh pine, Fruity finish",
     "gradient": "linear-gradient(135deg,#1d3b4d,#7fd4c1)"
   },
   {
@@ -49,7 +49,7 @@
     "price": 1650,
     "rating": 4.9,
     "badge": "Rare",
-    "notes": "Silky buds · Melon sweetness · Zero bitterness",
+    "notes": "Silky buds, Melon sweetness, Zero bitterness",
     "gradient": "linear-gradient(135deg,#5a6062,#e5e9ea)"
   },
   {
@@ -62,20 +62,20 @@
     "price": 990,
     "rating": 4.7,
     "badge": "Aromatic",
-    "notes": "Seven-night scenting · Flowers of May · Calm",
+    "notes": "Seven-night scenting, Flowers of May, Calm",
     "gradient": "linear-gradient(135deg,#33475b,#c8e3ff)"
   },
   {
     "id": "masala-exotic",
     "name": "Masala Chai Exotic",
-    "bn": "মসলা চা এক্সোটিক",
+    "bn": "মসলা চাই এক্সোটিক",
     "type": "Spiced",
     "origin": "Kolkata Blenders",
     "height": 500,
     "price": 560,
     "rating": 4.8,
     "badge": "Street Classic",
-    "notes": "Cardamom · Cinnamon · Peppercorn · Ginger",
+    "notes": "Cardamom, Cinnamon, Peppercorn, Ginger",
     "gradient": "linear-gradient(135deg,#4a2030,#d98a4b)"
   },
   {
@@ -88,7 +88,7 @@
     "price": 1150,
     "rating": 4.8,
     "badge": "Award Winning",
-    "notes": "Orchid nose · Honey rock · Slow roasted",
+    "notes": "Orchid nose, Honey rock, Slow roasted",
     "gradient": "linear-gradient(135deg,#2f4a2f,#9ed49a)"
   },
   {
@@ -101,59 +101,59 @@
     "price": 690,
     "rating": 4.7,
     "badge": "Warm",
-    "notes": "Saffron threads · Almonds · Winter gold",
+    "notes": "Saffron threads, Almonds, Winter gold",
     "gradient": "linear-gradient(135deg,#6d3a10,#f0b957)"
   },
   {
     "id": "earl-grey-bergamot",
     "name": "Earl Grey Noir",
-    "bn": "আর্ল গ্রে নোয়া",
+    "bn": "আর্ল গ্রে নয়ার",
     "type": "Flavored",
     "origin": "English Recipe",
     "height": 600,
     "price": 720,
     "rating": 4.6,
     "badge": "Classic",
-    "notes": "Italian bergamot · Blue cornflower · Citrus",
+    "notes": "Italian bergamot, Blue cornflower, Citrus",
     "gradient": "linear-gradient(135deg,#232a3a,#8fb7e8)"
   },
   {
-    "id": "pu erh-aged",
+    "id": "pu-erh-aged",
     "name": "Aged Pu-erh 2016",
-    "bn": "পু-আর ২০১৬",
+    "bn": "এজড পু-এর ২০১৬",
     "type": "Dark",
     "origin": "Yunnan, China",
     "height": 1400,
     "price": 1450,
     "rating": 4.9,
     "badge": "Vintage",
-    "notes": "8-year age · Earthy & deep · Shou bricks",
+    "notes": "8-year age, Earthy & deep, Shou bricks",
     "gradient": "linear-gradient(135deg,#2b1e14,#8a5a2c)"
   },
   {
     "id": "blue-pea-bloom",
     "name": "Blue Pea Bloom",
-    "bn": "ব্লু পিয়া ব্লুম",
+    "bn": "ব্লু পি ব্লুম",
     "type": "Herbal",
     "origin": "Sundarbans Edge, BD",
     "height": 50,
     "price": 540,
     "rating": 4.5,
     "badge": "Caffeine Free",
-    "notes": "Lemon turns violet · Butterfly pea · No caffeine",
+    "notes": "Lemon turns violet, Butterfly pea, No caffeine",
     "gradient": "linear-gradient(135deg,#1b2c68,#7d9bff)"
   },
   {
     "id": "rooibos-red",
     "name": "Red Rooibos Sunset",
-    "bn": "রিড রুইবোস",
+    "bn": "রেড রুইবস সানসেট",
     "type": "Herbal",
     "origin": "Cederberg, South Africa",
     "height": 1500,
     "price": 610,
     "rating": 4.5,
     "badge": "Honey Sweet",
-    "notes": "Caramel & honey · Caffeine free · Ruby red cup",
+    "notes": "Caramel & honey, Caffeine free, Ruby red cup",
     "gradient": "linear-gradient(135deg,#5c1f1f,#ef8a5a)"
   },
   {
@@ -166,20 +166,20 @@
     "price": 1050,
     "rating": 4.8,
     "badge": "Umami",
-    "notes": "Deep umami · Seaweed sheen · Steamed jade",
+    "notes": "Deep umami, Seaweed sheen, Steamed jade",
     "gradient": "linear-gradient(135deg,#1e4030,#66c08b)"
   },
   {
     "id": "lemon-ginger-dawn",
     "name": "Lemon Ginger Dawn",
-    "bn": "লেবু আদা ডন",
+    "bn": "লেমন জিঞ্জার ডন",
     "type": "Herbal",
     "origin": "Sylhet Blend, BD",
     "height": 300,
     "price": 480,
     "rating": 4.6,
     "badge": "Detox",
-    "notes": "Real lemon peel · Raw ginger · Wake-up call",
+    "notes": "Real lemon peel, Raw ginger, Wake-up call",
     "gradient": "linear-gradient(135deg,#4d4a12,#e8e06a)"
   },
   {
@@ -192,7 +192,7 @@
     "price": 520,
     "rating": 4.6,
     "badge": "Night Cup",
-    "notes": "Apple-honey calm · Golden flowers · Sleepy",
+    "notes": "Apple-honey calm, Golden flowers, Sleepy",
     "gradient": "linear-gradient(135deg,#6b6427,#f5e9a8)"
   }
 ]
