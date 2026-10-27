@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Everest Tea</title>
+  <meta name="description" content="Everest Tea checkout — cash on delivery available across Bangladesh." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="logo" href="/index.html">Everest <em>Tea</em><span class="mark">EST. 1962</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/shop.html">The Collection</a></li>
+      <li><a href="/index.html#story">Our Story</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="openCart">Cart<span id="cartCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="page-head" style="padding-bottom:34px">
+    <span class="kicker">Final step</span>
+    <h1>Summit<br/><em>checkout</em></h1>
+  </header>
+
+  <div id="coWrap">
+    <div class="co-grid">
+      <form class="co-panel reveal in" id="orderForm">
+        <h3>Delivery details</h3>
+        <div class="field"><label>Full name</label><input name="name" required placeholder="Shaheen Rahman" /></div>
+        <div class="field"><label>Phone</label><input name="phone" required placeholder="+880 1XXX-XXXXXX" /></div>
+        <div class="field"><label>Full address</label><textarea name="address" rows="3" required placeholder="House, Road, Area, City"></textarea></div>
+        <div class="field"><label>Payment method</label>
+          <select name="payment">
+            <option>Cash on delivery</option>
+            <option>bKash / Nagad</option>
+            <option>Card (link on delivery)</option>
+          </select>
+        </div>
+        <div class="field"><label>Delivery notes (optional)</label><input name="notes" placeholder="Call before delivery, gate code…" /></div>
+        <button class="btn" type="submit"><span>Place order</span><span class="arrow">→</span></button>
+        <p class="form-note">Cash on delivery available nationwide. Free shipping over ৳500.</p>
+      </form>
+
+      <aside class="co-panel reveal in">
+        <h3>Order summary</h3>
+        <div id="coItems"></div>
+        <div class="co-line" style="margin-top:14px"><span>Subtotal</span><span id="coSub">৳0</span></div>
+        <div class="co-line"><span>Delivery</span><span id="coShip">৳0</span></div>
+        <div class="co-line total"><span>Grand total</span><span id="coGrand">৳0</span></div>
+        <p class="co-note">প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।</p>
+      </aside>
+    </div>
+  </div>
+
+  <div id="successBox" class="success-box" style="display:none">
+    <span class="big">i.</span>
+    <h2>Order planted at base camp</h2>
+    <p class="motto-mini">প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।</p>
+    <p>Your order ID is <b id="orderId">—</b>. Our team will call you within 30 minutes to confirm delivery. Keep the kettle warm.</p>
+    <a class="btn" href="/shop.html" style="margin-top:30px"><span>Back to the collection</span><span class="arrow">→</span></a>
+  </div>
+
+  <footer>
+    <div class="copy" style="border:0;padding-top:0">
+      <span>© 2026 Everest Tea Co. All rights reserved.</span>
+      <span>Crafted with whole leaf &amp; care.</span>
+    </div>
+  </footer>
+
+  <aside class="drawer-mask"></aside>
+  <aside class="drawer">
+    <div class="drawer-head">
+      <div><b>Your cart</b><small>The ascent list</small></div>
+      <button class="drawer-close" id="closeCart" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot">
+      <div class="row-total"><span>Subtotal</span><b id="drawerTotal">৳0</b></div>
+      <a class="btn checkout-btn" href="/shop.html"><span>Continue shopping</span><span class="arrow">→</span></a>
+    </div>
+  </aside>
+
+  <div class="toast"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

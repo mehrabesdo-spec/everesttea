@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Collection — Everest Tea</title>
+  <meta name="description" content="Browse all fifteen Everest Tea blends — black, green, white, oolong, dark and herbal. Filter, search and order. প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়</span><span>Whole leaf, never dust</span><span>Free delivery over ৳500</span><span>Cash on delivery nationwide</span><span>প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়</span><span>Whole leaf, never dust</span><span>Free delivery over ৳500</span><span>Cash on delivery nationwide</span>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a class="logo" href="/index.html">Everest <em>Tea</em><span class="mark">EST. 1962</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/shop.html">The Collection</a></li>
+      <li><a href="/index.html#story">Our Story</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="openCart">Cart<span id="cartCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <span class="kicker">The Collection</span>
+    <h1>Fifteen blends,<br/><em>one mountain</em></h1>
+    <p class="lead">Filter by type or search in Bangla or English — from malty Assam to silver Fujian buds. <span class="bn">সবগুলো প্রিমিয়াম শুকনো চা এক জায়গায়।</span></p>
+  </header>
+
+  <div class="search-wrap">
+    <input id="searchBox" type="search" placeholder="Search tea, origin or note…" aria-label="Search teas" />
+  </div>
+  <div class="filters" id="filterChips"></div>
+  <p id="resultCount"></p>
+
+  <section style="padding-top:0">
+    <div class="grid-teas" id="shopGrid"></div>
+  </section>
+
+  <div class="cta-wrap reveal">
+    <div class="cta">
+      <span class="kicker">Can't decide?</span>
+      <h2>Let a sommelier read <em>your weather</em></h2>
+      <p class="motto-mini">তথ্যপন্থী সোমেলিয়ে টিম সাহায্য করার জন্য অপেক্ষা করছে।</p>
+      <a class="btn" href="/contact.html"><span>Ask the tea sommelier</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="/index.html">Everest <em>Tea</em></a>
+        <p>Whole-leaf dry tea from the world's highest gardens, delivered fresh across Bangladesh.</p>
+        <p class="motto-bn">প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।</p>
+      </div>
+      <div class="foot">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="/shop.html">All teas</a></li>
+          <li><a href="/shop.html">Black</a></li>
+          <li><a href="/shop.html">Green</a></li>
+          <li><a href="/shop.html">Herbal &amp; caffeine-free</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/index.html#story">Our story</a></li>
+          <li><a href="/index.html#voices">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html">Wholesale</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Visit / call</h4>
+        <ul>
+          <li>Trail House, Road 12,<br/>Banani, Dhaka 1213</li>
+          <li><a href="tel:+8801700000000">+880 1700-000000</a></li>
+          <li><a href="mailto:hello@everesttea.com.bd">hello@everesttea.com.bd</a></li>
+          <li>Open 9am — 10pm, daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Everest Tea Co. All rights reserved.</span>
+      <span>Crafted with whole leaf &amp; care.</span>
+    </div>
+  </footer>
+
+  <aside class="drawer-mask"></aside>
+  <aside class="drawer">
+    <div class="drawer-head">
+      <div><b>Your cart</b><small>The ascent list</small></div>
+      <button class="drawer-close" id="closeCart" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot">
+      <div class="row-total"><span>Subtotal</span><b id="drawerTotal">৳0</b></div>
+      <a class="btn checkout-btn" href="/checkout"><span>Checkout · COD available</span><span class="arrow">→</span></a>
+    </div>
+  </aside>
+
+  <div class="toast"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

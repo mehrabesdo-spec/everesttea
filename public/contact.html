@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Everest Tea</title>
+  <meta name="description" content="Talk to the Everest Tea team — sommelier help, wholesale, order tracking. প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়</span><span>We reply within 2 hours</span><span>Wholesale &amp; corporate gifts welcome</span><span>Sommelier desk: Fridays 4–8pm</span><span>প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়</span><span>We reply within 2 hours</span><span>Wholesale &amp; corporate gifts welcome</span><span>Sommelier desk: Fridays 4–8pm</span>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a class="logo" href="/index.html">Everest <em>Tea</em><span class="mark">EST. 1962</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/shop.html">The Collection</a></li>
+      <li><a href="/index.html#story">Our Story</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="openCart">Cart<span id="cartCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <span class="kicker">Say hello</span>
+    <h1>Talk to the<br/><em>mountain team</em></h1>
+    <p class="lead">Wholesale? Gift box? Just want a sommelier to read your weather and pick a tea? <span class="bn">যেকোনো প্রশ্নে নির্দ্বিধায় যোগাযোগ করুন।</span></p>
+  </header>
+
+  <section style="padding-top:20px">
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Reach us</h3>
+        <div class="item">
+          <svg class="ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 29s10-8.4 10-17A10 10 0 0 0 6 12c0 8.6 10 17 10 17Z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="12" r="3.5" stroke="currentColor" stroke-width="2"/></svg>
+          <div><b>Head office</b><small>Trail House, Road 12, Banani,<br/>Dhaka 1213, Bangladesh</small></div>
+        </div>
+        <div class="item">
+          <svg class="ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 5h5l2 6-3 2a16 16 0 0 0 6 6l2-3 6 2v5c0 1.5-1.3 2.7-3 2.5C12.6 24.4 7 18.8 6.5 8 6.3 6.3 7.5 5 9 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <div><b>Hotline · 9am–10pm</b><small>+880 1700-000000 · +880 1900-000000</small></div>
+        </div>
+        <div class="item">
+          <svg class="ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="m4 9 12 9L28 9" stroke="currentColor" stroke-width="2"/></svg>
+          <div><b>Email</b><small>hello@everesttea.com.bd<br/>wholesale@everesttea.com.bd</small></div>
+        </div>
+        <div class="item">
+          <svg class="ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 24 12 8l5 9 3-5 8 12H4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <div><b>Sommelier desk</b><small>Free brew-matching sessions every Friday, 4–8pm (WhatsApp)</small></div>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <h3>Send a message</h3>
+        <form onsubmit="event.preventDefault(); showToast('বার্তা পাঠানো হয়েছে। We reply within 2 hours.'); this.reset();">
+          <div class="field"><label>Your name</label><input required placeholder="Shaheen Rahman" /></div>
+          <div class="field"><label>Phone or email</label><input required placeholder="+880 1XXX-XXXXXX" /></div>
+          <div class="field"><label>Topic</label>
+            <select><option>General question</option><option>Wholesale &amp; cafés</option><option>My order</option><option>Corporate gifts</option></select>
+          </div>
+          <div class="field"><label>Message</label><textarea rows="5" required placeholder="এভারেস্ট টি-কে লিখুন…"></textarea></div>
+          <button class="btn" type="submit"><span>Send to base camp</span><span class="arrow">→</span></button>
+          <p class="form-note">Average first reply: 2 hours. Monsoon days: 4 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="/index.html">Everest <em>Tea</em></a>
+        <p>Whole-leaf dry tea from the world's highest gardens, delivered fresh across Bangladesh.</p>
+        <p class="motto-bn">প্রতি চুমুকে যেন ছুঁয়ে দেয় এভারেস্টের চূড়ায়।</p>
+      </div>
+      <div class="foot">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="/shop.html">All teas</a></li>
+          <li><a href="/shop.html">Black</a></li>
+          <li><a href="/shop.html">Green</a></li>
+          <li><a href="/shop.html">Herbal &amp; caffeine-free</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/index.html#story">Our story</a></li>
+          <li><a href="/index.html#voices">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html">Wholesale</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Visit / call</h4>
+        <ul>
+          <li>Trail House, Road 12,<br/>Banani, Dhaka 1213</li>
+          <li><a href="tel:+8801700000000">+880 1700-000000</a></li>
+          <li><a href="mailto:hello@everesttea.com.bd">hello@everesttea.com.bd</a></li>
+          <li>Open 9am — 10pm, daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Everest Tea Co. All rights reserved.</span>
+      <span>Crafted with whole leaf &amp; care.</span>
+    </div>
+  </footer>
+
+  <aside class="drawer-mask"></aside>
+  <aside class="drawer">
+    <div class="drawer-head">
+      <div><b>Your cart</b><small>The ascent list</small></div>
+      <button class="drawer-close" id="closeCart" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot">
+      <div class="row-total"><span>Subtotal</span><b id="drawerTotal">৳0</b></div>
+      <a class="btn checkout-btn" href="/checkout"><span>Checkout · COD available</span><span class="arrow">→</span></a>
+    </div>
+  </aside>
+
+  <div class="toast"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
