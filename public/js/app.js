@@ -80,7 +80,9 @@ function cardHTML(t, i) {
     <div class="product-visual" style="--tint:${TYPE_TINT[t.type] || "rgba(148,178,214,0.12)"}">
       <span class="index">${idx} / 15</span>
       <span class="product-badge ${hot ? "hot" : ""}">${t.badge}</span>
-      ${ART[t.type] || ART.Black}
+      ${t.img
+        ? `<img class="product-photo" src="/img/web/${t.img}" alt="${t.name} loose-leaf tea" loading="lazy" decoding="async" />`
+        : (ART[t.type] || ART.Black)}
     </div>
     <div class="product-info">
       <div class="product-tags"><span>${t.type}</span><i></i><span>${t.origin}</span></div>
@@ -188,7 +190,7 @@ function lineHTML(id, qty) {
   if (!t) return "";
   return `
   <div class="ci">
-    <div class="ci-art" style="--tint:${TYPE_TINT[t.type] || "rgba(148,178,214,0.12)"}">${ART[t.type] || ART.Black}</div>
+    <div class="ci-art" style="--tint:${TYPE_TINT[t.type] || "rgba(148,178,214,0.12)"}">${t.img ? `<img src="/img/web/${t.img}" alt="${t.name}" loading="lazy" />` : (ART[t.type] || ART.Black)}</div>
     <div class="ci-info">
       <b>${t.name}</b>
       <small>${fmt(t.price)} /100g</small>
